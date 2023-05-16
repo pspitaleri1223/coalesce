@@ -1,0 +1,168 @@
+steps:
+  V_SUPPLIER_MKT-49a9c3cc-f513-4c3e-a362-a82b0e14f499:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+      database: ""
+      dependencies: []
+      deployEnabled: true
+      description: Supplier data as defined by TPC-H
+      isDataVault: false
+      isMultisource: false
+      locationID: ""
+      locationName: WORK
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 9a696dca-9266-429f-8602-7064da8c06db
+              stepCounter: 49a9c3cc-f513-4c3e-a362-a82b0e14f499
+            config: {}
+            dataType: NUMBER
+            defaultValue: ""
+            description: ""
+            hashColumns: []
+            isSurrogateKey: true
+            name: DIM_SUPPLIER1_KEY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - columnReference:
+              columnCounter: 55a382bc-695b-4aaa-95c5-e12c6dae3627
+              stepCounter: 49a9c3cc-f513-4c3e-a362-a82b0e14f499
+            dataType: NUMBER
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            isBusinessKey: true
+            name: DIM_DIM_SUPPLIER_KEY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 736702f7-0037-49d2-be4b-f56841053236
+                    stepCounter: 832450c6-1233-4991-8ee5-ee25dbe920ac
+                transform: ""
+          - columnReference:
+              columnCounter: df70a8a3-7806-4182-9fe2-d672424b667a
+              stepCounter: 49a9c3cc-f513-4c3e-a362-a82b0e14f499
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: S_SUPPKEY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 3822ca70-df86-4834-9036-e530bee04336
+                    stepCounter: 832450c6-1233-4991-8ee5-ee25dbe920ac
+                transform: ""
+          - columnReference:
+              columnCounter: 47a9e4eb-b7cb-4c11-a88e-6e1a1d582abb
+              stepCounter: 49a9c3cc-f513-4c3e-a362-a82b0e14f499
+            dataType: VARCHAR(25)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: S_NAME
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2917e653-2e21-4923-9b58-d676cd9432c5
+                    stepCounter: 832450c6-1233-4991-8ee5-ee25dbe920ac
+                transform: ""
+          - columnReference:
+              columnCounter: d5e3e3d1-ab59-4bda-8095-9a4f7f7d84c2
+              stepCounter: 49a9c3cc-f513-4c3e-a362-a82b0e14f499
+            dataType: VARCHAR(101)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: S_COMMENT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 41fc204c-2e98-4862-9c88-3580b61effe1
+                    stepCounter: 832450c6-1233-4991-8ee5-ee25dbe920ac
+                transform: ""
+          - columnReference:
+              columnCounter: 5d679f93-9fa3-4678-b4d9-f4ec81346be4
+              stepCounter: 49a9c3cc-f513-4c3e-a362-a82b0e14f499
+            dataType: VARCHAR(25)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: R_NAME
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 55ebb79e-a97b-4415-9b16-b3cd99bed444
+                    stepCounter: 832450c6-1233-4991-8ee5-ee25dbe920ac
+                transform: ""
+          - columnReference:
+              columnCounter: 5ced2c24-74fe-41cf-b5ba-0eafa3965667
+              stepCounter: 49a9c3cc-f513-4c3e-a362-a82b0e14f499
+            dataType: VARCHAR(25)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: N_NAME
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 32eb81ad-a48c-47ec-b9f2-46b1336dde34
+                    stepCounter: 832450c6-1233-4991-8ee5-ee25dbe920ac
+                transform: ""
+          - columnReference:
+              columnCounter: e1275f92-2936-4097-990f-f248dec9611d
+              stepCounter: 49a9c3cc-f513-4c3e-a362-a82b0e14f499
+            dataType: VARCHAR(152)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: N_COMMENT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 98605ee0-0cf7-4821-a026-0a3392e3a5a9
+                    stepCounter: 832450c6-1233-4991-8ee5-ee25dbe920ac
+                transform: ""
+          - columnReference:
+              columnCounter: f16893fd-dd48-42ed-8eb2-d8e54d516bf6
+              stepCounter: 49a9c3cc-f513-4c3e-a362-a82b0e14f499
+            dataType: VARCHAR(152)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: R_COMMENT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: c855132f-a2af-41d9-b2a2-1b68401d6b58
+                    stepCounter: 832450c6-1233-4991-8ee5-ee25dbe920ac
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: WORK
+                nodeName: DIM_SUPPLIER
+            join:
+              joinCondition: FROM {{ ref('WORK', 'DIM_SUPPLIER') }} "DIM_SUPPLIER"
+            name: V_SUPPLIER_MKT
+            noLinkRefs: []
+      name: V_SUPPLIER_MKT
+      overrideSQL: false
+      schema: ""
+      sqlType: Dimension
+      type: sql
+    stepCounter: 49a9c3cc-f513-4c3e-a362-a82b0e14f499
